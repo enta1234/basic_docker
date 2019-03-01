@@ -20,6 +20,6 @@ docker rmi [options] <images_id/images_name> | ทำการลบ images ท�
 
 <p> ให้ทำการ pull image ลงมาไว้ภายในเครื่อง </p>
 
-`docker pull alpine`
+`# docker pull alpine`
 
 ## ep2 startup container
