@@ -12,3 +12,10 @@ docker run [OPTIONS] <images_id/images_name> | เรียกใช้งาน
 docker exec -it <container_id/container_name> [scripting] | จะทำการ execute เข้าไปใน container โดยการใช้ script ซึ่งส่วนมากจะมี sh กับ bash เป็นพื้นฐานของ unix/linux | `docker exec -it entro01 sh`
 docker start <container_id/container_name> | เริ่มใช้งานของ container ที่ stop อยู่ | `docker start entro01` or `docker start 440as5ddaa66`
 docker stop <container_id/container_name> | หยุดการทำงานของ container ที่ start อยู่ | `docker stop entro01` or `docker stop 440as5ddaa66`
+docker rm [OPTIONS] <container_id/container_name> | หยุดการทำงานของ container ที่ start อยู่ | `docker rm entro01` or `docker rm -f 440as5ddaa66`
+docker rmi [OPTIONS] <images_id/images_name> | หยุดการทำงานของ container ที่ start อยู่ | `docker rmi entro01` or `docker rmi -f 440as5ddaa66`
+
+
+
+## ep1 images
+
