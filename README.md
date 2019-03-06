@@ -1,5 +1,5 @@
 # [basic_docker] | เจ้า docker ปลาตัวน้อย
-  >docker เป็น software container ทำงานได้รวดเร็ว ลดขั้นตอนการติดตั้ง os ลง โดยเปลี่ยนเป็น **image file** ให้เรียกใช้ได้ง่ายขึ้น เมื่อสั่งให้ image ทำงานจะเป็นสถานะเป็น **container** และสามารถติดตั้ง application server ก็สามารถทำได้ง่ายเพราะ docker มีลักษณะเป็น **infrastructure-as-code**
+  >docker เป็น software container ทำงานได้รวดเร็ว ลดขั้นตอนการติดตั้ง os ลง โดยเปลี่ยนเป็น **image file** ให้เรียกใช้ได้ง่ายขึ้น เมื่อสั่งให้ images ทำงาน จะเปลี่ยนสถานะเป็น **container** และสามารถติดตั้ง application server ก็สามารถทำได้ง่ายเพราะ docker มีลักษณะเป็น **infrastructure-as-code** (image >> container)
 
 ## basic command
 command | comment | ex.
@@ -16,10 +16,17 @@ docker rm [options] <container_id/container_name> | ทำการลบ contai
 docker rmi [options] <images_id/images_name> | ทำการลบ images ที่ระบุ ด้วย id | `docker rmi entro01` or `docker rmi -f 440as5ddaa66`
 
 ## ep1 pull images
-  >เมื่อทำการหา images จาก registry ต่างๆแล้ว(docker hub) ให้ดู version ของ images ที่เราสนใจจาก repository นั้นๆด้วย ถ้าต้องการ images ที่ไม่ใช่ตัว latest
+  ให้ทำการ pull **image** ลงมาไว้ภายในเครื่อง
 
-<p> ให้ทำการ pull image ลงมาไว้ภายในเครื่อง </p>
+  `>_ docker pull alpine`
 
-`# docker pull alpine`
-
-## ep2 startup container
+## ep2 run container
+  ทำการใช้งาน image ที่ได้ pull ลงมา โดยเปลี่ยนเป็น **container** ด้วยคำสั่ง run
+ 
+  - 1 `>_ docker run --rm -it --name entro01 alpine`
+  - 2 `>_ docker run -dit --name entro01 alpine`
+  - 3 `>_ docker run --rm -it -w /app/ --expose 3000 --mount `
+  
+## ep3 Dockerfile
+## ep4 build image
+## ep5 stop-start-delete
