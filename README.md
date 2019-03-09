@@ -75,4 +75,6 @@ docker rmi [options] <images_id/images_name> | ทำการลบ images ท�
 
   `>_ docker rmi -f $(docker images -q -a)`
 
-  (อ่านเพิ่มเติมได้ที่)[https://github.com/enta1234/docker-cp]
+______
+
+  [อ่านเพิ่มเติมได้ที่](https://github.com/enta1234/docker-cp)
