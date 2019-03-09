@@ -25,8 +25,16 @@ docker rmi [options] <images_id/images_name> | ทำการลบ images ท�
  
   - 1 `>_ docker run --rm -it --name entro01 alpine`
   - 2 `>_ docker run -dit --name entro01 alpine`
-  - 3 `>_ docker run --rm -it -w /app/ --expose 3000 --mount `
+  - 3 `>_ docker run --rm -it -w /app/myweb --expose 3000 --mount .\:/app/myweb `
   
 ## ep3 Dockerfile
+  เราสามารถคำสั่งของ docker เก็บไว้เป็นไฟล์ได้เราจะเรียกไฟล์นั้นว่า Dockerfile
+  
+  `>_ cd your/project`
+  
+  `>_ vi Dockerfile`
+  
+  ตัวอย่าง Dockerfile
+  
 ## ep4 build image
 ## ep5 stop-start-delete
