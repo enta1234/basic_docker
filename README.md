@@ -16,25 +16,61 @@ docker rm [options] <container_id/container_name> | ทำการลบ contai
 docker rmi [options] <images_id/images_name> | ทำการลบ images ที่ระบุ ด้วย id | `docker rmi entro01` or `docker rmi -f 440as5ddaa66`
 
 ## ep1 pull images
-  ให้ทำการ pull **image** ลงมาไว้ภายในเครื่อง
+  >ให้ทำการ pull **image** ลงมาไว้ภายในเครื่อง
 
   `>_ docker pull alpine`
+  `>_ docker pull python:2.7.16-alpine3.8`
 
 ## ep2 run container
-  ทำการใช้งาน image ที่ได้ pull ลงมา โดยเปลี่ยนเป็น **container** ด้วยคำสั่ง run
+  >ทำการใช้งาน image ที่ได้ pull ลงมา โดยเปลี่ยนเป็น **container** ด้วยคำสั่ง run
  
   - 1 `>_ docker run --rm -it --name entro01 alpine`
-  - 2 `>_ docker run -dit --name entro01 alpine`
-  - 3 `>_ docker run --rm -it -w /app/myweb --expose 3000 --mount .\:/app/myweb `
+  - 2 `>_ docker run -dit -p 3000:3000 --name entro01 alpine`
+  - 3 `>_ docker run --rm -it -w /app/myweb --expose 3000 -p 3000:3000 --mount .\:/app/myweb python:2.7.16-alpine3.8 python main.py`
   
 ## ep3 Dockerfile
-  เราสามารถคำสั่งของ docker เก็บไว้เป็นไฟล์ได้เราจะเรียกไฟล์นั้นว่า Dockerfile
+  >เราสามารถคำสั่งของ docker เก็บไว้เป็นไฟล์ได้เราจะเรียกไฟล์นั้นว่า Dockerfile
   
   `>_ cd your/project`
   
   `>_ vi Dockerfile`
   
-  ตัวอย่าง Dockerfile
+  ตัวอย่าง [Dockerfile](https://github.com/enta1234/basic_docker/Dcoekrfile).
   
 ## ep4 build image
+  >เมื่อเตรียม Dockerfile เสร็จเราสามารถ image ของเราเองได้
+
+  `>_ docker build -t myweb:1.0.0 .`
+
+  >หรือในกรณีที่เราไมได้ตั้งชื่อไฟล์ว่า Dockerfile ให้เราระบุให้ชัดเจน
+
+  `>_ docker build -t myweb:1.0.0 ./docker-file`
+
+  ex.
+
+  `>_ docker run -dit -p 8000:8000 --name webEntro myweb:1.0.0`
+
 ## ep5 stop-start-delete
+  ex. stop container
+
+  `>_ docker stop webEntro`
+
+  ex. start container
+
+  `>_ docker stop webEntro`
+
+  ex. delete container
+
+  `>_ docker rm -f webEntro`
+
+  ex. delete images
+
+  `>_ docker rmi -f myweb:1.0.0`
+
+  ex. delete, stop and start all container.
+
+  `>_ docker rm -f $(docker ps -qa)`
+
+  ex. delete all images.
+
+  `>_ docker rmi -f $(docker images -q -a)`
