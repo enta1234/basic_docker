@@ -35,7 +35,7 @@ docker rmi [options] <images_id/images_name> | ทำการลบ images ท�
   
   `>_ vi Dockerfile`
   
-  ตัวอย่าง [Dockerfile](https://github.com/enta1234/basic_docker/Dcoekrfile).
+  ตัวอย่าง [Dockerfile](https://github.com/enta1234/basic_docker/blob/master/Dockerfile).
   
 ## ep4 build image
   >เมื่อเตรียม Dockerfile เสร็จเราสามารถ image ของเราเองได้
