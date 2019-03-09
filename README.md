@@ -15,20 +15,20 @@ docker stop <container_id/container_name> | หยุดการทำงาน
 docker rm [options] <container_id/container_name> | ทำการลบ container ที่ระบุ ด้วย id หรือ name | `docker rm entro01` or `docker rm -f 440as5ddaa66`
 docker rmi [options] <images_id/images_name> | ทำการลบ images ที่ระบุ ด้วย id | `docker rmi entro01` or `docker rmi -f 440as5ddaa66`
 
-## ep1 pull images
+## cp1 pull images
   >ให้ทำการ pull **image** ลงมาไว้ภายในเครื่อง
 
   `>_ docker pull alpine`
   `>_ docker pull python:2.7.16-alpine3.8`
 
-## ep2 run container
+## cp2 run container
   >ทำการใช้งาน image ที่ได้ pull ลงมา โดยเปลี่ยนเป็น **container** ด้วยคำสั่ง run
  
   - 1 `>_ docker run --rm -it --name entro01 alpine`
   - 2 `>_ docker run -dit -p 3000:3000 --name entro01 alpine`
   - 3 `>_ docker run --rm -it -w /app/myweb --expose 3000 -p 3000:3000 --mount .\:/app/myweb python:2.7.16-alpine3.8 python main.py`
   
-## ep3 Dockerfile
+## cp3 Dockerfile
   >เราสามารถคำสั่งของ docker เก็บไว้เป็นไฟล์ได้เราจะเรียกไฟล์นั้นว่า Dockerfile
   
   `>_ cd your/project`
@@ -37,7 +37,7 @@ docker rmi [options] <images_id/images_name> | ทำการลบ images ท�
   
   ตัวอย่าง [Dockerfile](https://github.com/enta1234/basic_docker/blob/master/Dockerfile).
   
-## ep4 build image
+## cp4 build image
   >เมื่อเตรียม Dockerfile เสร็จเราสามารถ image ของเราเองได้
 
   `>_ docker build -t myweb:1.0.0 .`
@@ -50,7 +50,7 @@ docker rmi [options] <images_id/images_name> | ทำการลบ images ท�
 
   `>_ docker run -dit -p 8000:8000 --name webEntro myweb:1.0.0`
 
-## ep5 stop-start-delete
+## cp5 stop-start-delete
   ex. stop container
 
   `>_ docker stop webEntro`
