@@ -8,7 +8,7 @@ docker [options] command| syntex ในการเรียกใช้คำ�
 docker images [options] | แสดง images ที่มีอยู่ในเครื่อง | `docker images` or `docker images -a`
 docker ps [options] | แสดง container ที่มีอยู่ในเครื่อง | `docker ps` or `docker ps -a`
 docker pull <images_name> | download images จาก repositories | `docker pull alpine` or `docker pull mongo`
-docker run [options] <images_id/images_name> | เรียกใช้งาน images ให้ทำงานขึ้นมาเป็น container | `docker run -dit --name entro01 alpine` or `docker run -dit -p 3000:80 -v /myapp:/app/ --name app01 alpine`
+docker run [options] <images_id/images_name> | เรียกใช้งาน images ให้ทำงานขึ้นมาเป็น container | `docker run -d --name entro01 alpine` or `docker run -d -p 3000:80 -v /myapp:/app/ --name app01 alpine`
 docker exec -it <container_id/container_name> [scripting] | จะทำการ execute เข้าไปใน container โดยการใช้ script ซึ่งส่วนมากจะมี sh กับ bash | `docker exec -it entro01 sh`
 docker start <container_id/container_name> | เริ่มใช้งานของ container ที่ stop อยู่ | `docker start entro01` or `docker start 440as5ddaa66`
 docker stop <container_id/container_name> | หยุดการทำงานของ container ที่ start อยู่ | `docker stop entro01` or `docker stop 440as5ddaa66`
@@ -25,7 +25,7 @@ docker rmi [options] <images_id/images_name> | ทำการลบ images ท�
   >ทำการใช้งาน image ที่ได้ pull ลงมา โดยเปลี่ยนเป็น **container** ด้วยคำสั่ง run
  
   - 1 `>_ docker run --rm -it --name entro01 alpine`
-  - 2 `>_ docker run -dit -p 3000:3000 --name entro01 alpine`
+  - 2 `>_ docker run -d -p 3000:3000 --name entro01 alpine`
   - 3 `>_ docker run --rm -it -w /app/myweb --expose 3000 -p 3000:3000 --mount .\:/app/myweb python:2.7.16-alpine3.8 python main.py`
   
 ## cp3 Dockerfile
