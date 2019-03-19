@@ -19,6 +19,7 @@ docker rmi [options] <images_id/images_name> | ทำการลบ images ท�
   >ให้ทำการ pull **image** ลงมาไว้ภายในเครื่อง
 
   `>_ docker pull alpine`
+  
   `>_ docker pull python:2.7.16-alpine3.8`
 
 ## cp2 run container
