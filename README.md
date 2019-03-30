@@ -1,4 +1,4 @@
-  !(https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwiIqJOCp6nhAhUJq48KHbknAjUQjRx6BAgBEAU&url=https%3A%2F%2Fmedium.freecodecamp.org%2Fdocker-compose-nginx-and-letsencrypt-setting-up-website-to-do-all-the-things-for-that-https-7cb0bf774b7e&psig=AOvVaw1wussHKIVj3kBB6geXDKTl&ust=1554016035136436)
+  ![logo](https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwiIqJOCp6nhAhUJq48KHbknAjUQjRx6BAgBEAU&url=https%3A%2F%2Fmedium.freecodecamp.org%2Fdocker-compose-nginx-and-letsencrypt-setting-up-website-to-do-all-the-things-for-that-https-7cb0bf774b7e&psig=AOvVaw1wussHKIVj3kBB6geXDKTl&ust=1554016035136436)
 
 # [basic_docker] | เจ้า docker ปลาตัวน้อย
   >docker เป็น software container ทำงานได้รวดเร็ว ลดขั้นตอนการติดตั้ง os ลง โดยเปลี่ยนเป็น **image file** ให้เรียกใช้ได้ง่ายขึ้น เมื่อสั่งให้ images ทำงาน จะเปลี่ยนสถานะเป็น **container** และสามารถติดตั้ง application server ก็สามารถทำได้ง่ายเพราะ docker มีลักษณะเป็น **infrastructure-as-code** (image >> container)
