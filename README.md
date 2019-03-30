@@ -12,7 +12,7 @@
   - [cp2 run container](#cp2-run-container)
   - [cp3 Dockerfile](#cp3-Dockerfile)
   - [cp4 build image](#cp4-build-image)
-  - [cp5 stop, start & delete](#cp5-stop,-start-&-delete)
+  - [cp5 stop, start & delete](#cp5-stop-start--delete)
 
 ## basic command
 command | comment | ex.
