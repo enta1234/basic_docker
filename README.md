@@ -49,7 +49,7 @@ docker rmi [options] <images_id/images_name> | ทำการลบ images ท�
 
   ex.
 
-  `>_ docker run -dit -p 8000:8000 --name webEntro myweb:1.0.0`
+  `>_ docker run -d -p 8000:8000 --name webEntro myweb:1.0.0`
 
 ## cp5 stop-start-delete
   ex. stop container
