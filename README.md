@@ -1,5 +1,21 @@
+  
+  ![logo](https://d33wubrfki0l68.cloudfront.net/33282cd91fc50462bc515a615cccafa37fe07a63/3e476/images/logo.png)
+
 # [basic_docker] | เจ้า docker ปลาตัวน้อย
   >docker เป็น software container ทำงานได้รวดเร็ว ลดขั้นตอนการติดตั้ง os ลง โดยเปลี่ยนเป็น **image file** ให้เรียกใช้ได้ง่ายขึ้น เมื่อสั่งให้ images ทำงาน จะเปลี่ยนสถานะเป็น **container** และสามารถติดตั้ง application server ก็สามารถทำได้ง่ายเพราะ docker มีลักษณะเป็น **infrastructure-as-code** (image >> container)
+  
+  ### บทความที่น่าสนใจ
+  - [medium](https://medium.com/@rachatatongpagdee/docker-%E0%B8%84%E0%B8%B7%E0%B8%AD%E0%B8%AD%E0%B8%B0%E0%B9%84%E0%B8%A3-%E0%B9%83%E0%B8%8A%E0%B9%89%E0%B8%87%E0%B8%B2%E0%B8%99%E0%B8%AD%E0%B8%A2%E0%B9%88%E0%B8%B2%E0%B8%87%E0%B9%84%E0%B8%A3-7e77145967b6)
+  - [aws](https://aws.amazon.com/th/docker/)
+ 
+## สารบัญ
+
+  - [basic command](#basic-command)
+  - [cp1 pull images](#cp1-pull-images)
+  - [cp2 run container](#cp2-run-container)
+  - [cp3 Dockerfile](#cp3-Dockerfile)
+  - [cp4 build image](#cp4-build-image)
+  - [cp5 stop, start & delete](#cp5-stop-start--delete)
 
 ## basic command
 command | comment | ex.
@@ -8,7 +24,7 @@ docker [options] command| syntex ในการเรียกใช้คำ�
 docker images [options] | แสดง images ที่มีอยู่ในเครื่อง | `docker images` or `docker images -a`
 docker ps [options] | แสดง container ที่มีอยู่ในเครื่อง | `docker ps` or `docker ps -a`
 docker pull <images_name> | download images จาก repositories | `docker pull alpine` or `docker pull mongo`
-docker run [options] <images_id/images_name> | เรียกใช้งาน images ให้ทำงานขึ้นมาเป็น container | `docker run -dit --name entro01 alpine` or `docker run -dit -p 3000:80 -v /myapp:/app/ --name app01 alpine`
+docker run [options] <images_id/images_name> | เรียกใช้งาน images ให้ทำงานขึ้นมาเป็น container | `docker run -d --name entro01 alpine` or `docker run -d -p 3000:80 -v /myapp:/app/ --name app01 alpine`
 docker exec -it <container_id/container_name> [scripting] | จะทำการ execute เข้าไปใน container โดยการใช้ script ซึ่งส่วนมากจะมี sh กับ bash | `docker exec -it entro01 sh`
 docker start <container_id/container_name> | เริ่มใช้งานของ container ที่ stop อยู่ | `docker start entro01` or `docker start 440as5ddaa66`
 docker stop <container_id/container_name> | หยุดการทำงานของ container ที่ start อยู่ | `docker stop entro01` or `docker stop 440as5ddaa66`
@@ -19,6 +35,7 @@ docker rmi [options] <images_id/images_name> | ทำการลบ images ท�
   >ให้ทำการ pull **image** ลงมาไว้ภายในเครื่อง
 
   `>_ docker pull alpine`
+  
   `>_ docker pull python:2.7.16-alpine3.8`
 
 ## cp2 run container
@@ -47,9 +64,9 @@ docker rmi [options] <images_id/images_name> | ทำการลบ images ท�
 
   ex.
 
-  `>_ docker run -dit -p 8000:8000 --name webEntro myweb:1.0.0`
+  `>_ docker run -d -p 8000:8000 --name webEntro myweb:1.0.0`
 
-## cp5 stop-start-delete
+## cp5 stop, start & delete
   ex. stop container
 
   `>_ docker stop webEntro`
@@ -74,4 +91,6 @@ docker rmi [options] <images_id/images_name> | ทำการลบ images ท�
 
   `>_ docker rmi -f $(docker images -q -a)`
 
-  (อ่านเพิ่มเติมได้ที่)[https://github.com/enta1234/docker-cp]
+______
+
+  [อ่านเพิ่มเติมได้ที่](https://github.com/enta1234/docker-cp)
