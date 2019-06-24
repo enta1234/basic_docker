@@ -26,7 +26,6 @@ docker rmi [options] <images_id/images_name> | ทำการลบ images ท�
  
   - 1 `>_ docker run --rm -it --name entro01 alpine`
   - 2 `>_ docker run -dit -p 3000:3000 --name entro01 alpine`
-  - 3 `>_ docker run --rm -it -w /app/myweb --expose 3000 -p 3000:3000 --mount .\:/app/myweb python:2.7.16-alpine3.8 python main.py`
   
 ## cp3 Dockerfile
   >เราสามารถคำสั่งของ docker เก็บไว้เป็นไฟล์ได้เราจะเรียกไฟล์นั้นว่า Dockerfile
